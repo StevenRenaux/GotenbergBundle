@@ -97,7 +97,5 @@ final class MarkdownPdfBuilder extends AbstractBuilder implements BuilderAssetIn
         if ($this->getBodyBag()->get('files') === null && $this->getBodyBag()->get('downloadFrom') === null) {
             throw new MissingRequiredFieldException('At least one markdown file is required.');
         }
-
-        $this->validateFacturX();
     }
 }

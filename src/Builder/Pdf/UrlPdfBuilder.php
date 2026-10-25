@@ -72,8 +72,6 @@ final class UrlPdfBuilder extends AbstractBuilder implements BuilderAssetInterfa
         if ($this->getBodyBag()->get('url') !== null && $this->getBodyBag()->get('route') !== null) {
             throw new MissingRequiredFieldException('Provide only one of ["route", "url"] parameter. Not both.');
         }
-
-        $this->validateFacturX();
     }
 
     /**

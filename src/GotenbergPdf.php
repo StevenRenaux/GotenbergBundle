@@ -32,7 +32,7 @@ final class GotenbergPdf implements GotenbergPdfInterface
     }
 
     /**
-     * @param 'html'|'url'|'markdown'|'office'|'merge'|'convert'|'split'|'flatten'|'encrypt'|'embed'|'stamp'|'watermark'|'rotate'|'factur_x' $key
+     * @param 'html'|'url'|'markdown'|'office'|'merge'|'convert'|'split'|'flatten'|'encrypt'|'embed'|'stamp'|'watermark'|'rotate'|'facturx' $key
      *
      * @return (
      *   $key is 'html' ? HtmlPdfBuilder :
@@ -48,7 +48,7 @@ final class GotenbergPdf implements GotenbergPdfInterface
      *   $key is 'stamp' ? StampPdfBuilder :
      *   $key is 'watermark' ? WatermarkPdfBuilder :
      *   $key is 'rotate' ? RotatePdfBuilder :
-     *   $key is 'factur_x' ? FacturXPdfBuilder :
+     *   $key is 'facturx' ? FacturXPdfBuilder :
      *   BuilderInterface
      * )
      */
@@ -124,6 +124,6 @@ final class GotenbergPdf implements GotenbergPdfInterface
 
     public function facturX(): BuilderInterface
     {
-        return $this->getInternal('factur_x');
+        return $this->getInternal('facturx');
     }
 }
